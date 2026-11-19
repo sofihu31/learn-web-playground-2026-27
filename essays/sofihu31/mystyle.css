@@ -1,5 +1,559 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #123d68;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    min-height: 130px;
+    background: #073d70;
+    position: sticky;
+top: 0;
+z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5%;
+    gap: 25px;
+}
+
+.university-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.university-logo img {
+    display: block;
+    width: 145px;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+}
+
+.header h1 {
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: bold;
+    line-height: 1.15;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.navigation {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.navigation a {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #b9d9f3;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 80px 9%;
+    color: white;
+    background:
+        linear-gradient(rgba(5, 24, 43, 0.58), rgba(5, 24, 43, 0.72)),
+        url("imgs/torrevelasca.jpg") center 45% / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    color: #0872b8;
+}
+
+.hero .eyebrow {
+    color: white;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: 1.02;
+    max-width: 950px;
+    margin-bottom: 35px;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    font-family: Georgia, serif;
+    font-size: clamp(22px, 2.5vw, 32px);
+    max-width: 650px;
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+
+.hero-button {
+    display: inline-block;
+    border: 1px solid currentColor;
+    padding: 15px 24px;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: white;
+    color: #073d70;
+}
+
+.hero-caption {
+    position: absolute;
+    right: 7%;
+    bottom: 25px;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 100px 9%;
+}
+
+.section h2,
+.contact h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 30px;
+    color: #073d70;
+}
+
+.section-intro {
+    font-size: 19px;
+    margin-bottom: 35px;
+    color: #45627d;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    background: #eaf4fc;
+}
+
+.about .section-heading h2 {
+    max-width: 600px;
+}
+
+.about-text {
+    font-size: 18px;
+    color: #45627d;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #0872b8;
+    color: #07518c;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.text-link:hover {
+    color: #087fc7;
+}
+
+/* =========================
+   NUMBERS
+========================= */
+
+.numbers {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 65px 9%;
+    background: white;
+    border-bottom: 1px solid #c5d8e8;
+}
+
+.numbers div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.numbers strong {
+    font-size: 65px;
+    color: #07518c;
+    line-height: 1.2;
+}
+
+.numbers span {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* =========================
+   PROGRAMME
+========================= */
+
+.programme {
+    background: white;
+}
+
+.programme-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.programme-card {
+    background: #e8f3fc;
+    padding: 40px 35px;
+    min-height: 280px;
+    transition: transform 0.3s;
+}
+
+.programme-card:hover {
+    transform: translateY(-7px);
+}
+
+.card-number {
+    display: block;
+    color: #0872b8;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.programme-card h3 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #073d70;
+}
+
+.programme-card p {
+    color: #45627d;
+    font-size: 17px;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-section {
+    background: #073d70;
+    color: white;
+    padding: 90px 0;
+}
+
+.video-section .section {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.video-section .eyebrow {
+    color: #b9d9f3;
+}
+
+.video-section h2 {
+    color: white;
+}
+
+.video-section .section-intro {
+    color: #d5e7f7;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-width: 1100px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.light-link {
+    color: white;
+    border-color: #b9d9f3;
+}
+
+/* =========================
+   MILAN AND MAP
+========================= */
+
+.milan {
+    background: #eaf4fc;
+}
+
+.map-frame {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    margin: 35px 0 20px;
+}
+
+.map-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: #0b477d;
+    color: white;
+    text-align: center;
+    padding: 100px 9%;
+}
+
+.contact .eyebrow {
+    color: #b9d9f3;
+}
+
+.contact h2 {
+    color: white;
+}
+
+.contact p {
+    font-size: 19px;
+    margin-bottom: 35px;
+    color: #d5e7f7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #062d52;
+    color: white;
+    padding: 55px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #c6d8e8;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    width: 100%;
+    padding-top: 25px;
+    border-top: 1px solid #45627d;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 25px 5%;
+    }
+
+    .university-logo {
+        justify-content: center;
+    }
+
+    .header h1 {
+        white-space: normal;
+        font-size: 27px;
+    }
+
+    .navigation {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding: 60px 7%;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .programme-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .numbers {
+        flex-wrap: wrap;
+    }
+
+    .map-frame {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .university-logo img {
+        width: 100px;
+    }
+
+    .university-logo {
+        font-size: 13px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .navigation {
+        gap: 12px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .section {
+        padding: 65px 7%;
+    }
+
+    .programme-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .numbers strong {
+        font-size: 45px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .video-container {
+        width: 92%;
+    }
+}

@@ -1,32 +1,207 @@
+
 <!DOCTYPE html>
-<!-- Webcomm boilerplate -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA COM | University of Milan</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
- 
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a class="university-logo" href="https://www.unimi.it/" target="_blank">
+            <img src="imgs/minerva-34.png" alt="University of Milan logo">
+            <span>UNIVERSITÀ DEGLI STUDI<br>DI MILANO</span>
+        </a>
+
+        <nav class="navigation">
+            <a href="#about">ABOUT</a>
+            <a href="#programme">PROGRAMME</a>
+            <a href="#milan">MILAN</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">MILANO · CULTURE · IDEAS</p>
+                <h1>The future of communication</h1>
+                <p class="hero-subtitle">
+                    MA COM — Public and Corporate Communication
+                    in the heart of Milan.
+                </p>
+                <a class="hero-button" href="#about">
+                    DISCOVER THE PROGRAMME ↗
+                </a>
+            </div>
+            <p class="hero-caption">MILAN, A CITY IN MOTION</p>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section about" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">01 — ABOUT</p>
+                <h2>Communication means understanding the world around us.</h2>
+            </div>
+
+            <div class="about-text">
+                <p>
+                    The Master's Degree in Public and Corporate Communication
+                    explores the role of communication in organisations,
+                    institutions and contemporary society.
+                </p>
+                <p>
+                    Located in Milan, the programme combines communication
+                    studies with digital media, marketing, research and
+                    strategic thinking.
+                </p>
+                <a href="https://com.cdl.unimi.it/en" target="_blank" class="text-link">
+                    VISIT THE OFFICIAL PROGRAMME WEBSITE ↗
+                </a>
+            </div>
+        </section>
+
+        <!-- NUMBERS -->
+        <section class="numbers">
+            <div>
+                <strong>2</strong>
+                <span>CURRICULA</span>
+            </div>
+            <div>
+                <strong>120</strong>
+                <span>ECTS CREDITS</span>
+            </div>
+            <div>
+                <strong>MI</strong>
+                <span>MILAN, ITALY</span>
+            </div>
+        </section>
+
+        <!-- PROGRAMME -->
+        <section class="section programme" id="programme">
+            <p class="eyebrow">02 — PROGRAMME</p>
+            <h2>Three perspectives on communication.</h2>
+
+            <div class="programme-grid">
+                <article class="programme-card">
+                    <span class="card-number">01</span>
+                    <h3>Corporate Communication</h3>
+                    <p>
+                        Explore how organisations build their identity,
+                        reputation and relationships with different audiences.
+                    </p>
+                </article>
+
+                <article class="programme-card">
+                    <span class="card-number">02</span>
+                    <h3>Digital Media</h3>
+                    <p>
+                        Discover how digital platforms, technologies
+                        and online cultures transform communication.
+                    </p>
+                </article>
+
+                <article class="programme-card">
+                    <span class="card-number">03</span>
+                    <h3>Public Communication</h3>
+                    <p>
+                        Understand communication between institutions,
+                        citizens and society.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- VIDEO -->
+        <section class="video-section" id="video">
+            <div class="section">
+                <p class="eyebrow">03 — DISCOVER LA STATALE</p>
+                <h2>Get to know our university.</h2>
+                <p class="section-intro">
+                    Explore the University of Milan through its official videos.
+                </p>
+
+                
+<div class="video-container">
+   
+    <iframe
+        src="https://www.youtube-nocookie.com/embed/8FEvW_pcnjU"
+        title="University of Milan official video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+</div>
 
 
-        <p>Create your own <i>landing page</i> by typing up the following HTML/CSS code in here:</p>
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+                <a class="text-link light-link"
+                   href="https://www.youtube.com/user/UnimiVideo"
+                   target="_blank">
+                    EXPLORE THE OFFICIAL YOUTUBE CHANNEL ↗
+                </a>
+            </div>
+        </section>
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
+        <!-- MILAN / MAP -->
+        <section class="section milan" id="milan">
+            <p class="eyebrow">04 — THE CITY</p>
+            <h2>Study in the heart of Milan.</h2>
+            <p class="section-intro">
+                A city where history, creativity, culture and innovation meet.
+            </p>
 
-        <script src="" async defer></script>
-    </body>
+            <div class="map-frame">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=9.155%2C45.445%2C9.235%2C45.485&layer=mapnik&marker=45.460%2C9.190"
+                    title="Map of Milan"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <a class="text-link"
+               href="https://www.openstreetmap.org/#map=14/45.460/9.190"
+               target="_blank">
+                EXPLORE MILAN ON THE MAP ↗
+            </a>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact" id="contact">
+            <p class="eyebrow">05 — CONTACT</p>
+            <h2>Start your next chapter.</h2>
+            <p>
+                Discover the Master's Degree in Public and Corporate Communication.
+            </p>
+            <a class="hero-button" href="https://www.unimi.it/" target="_blank">
+                UNIVERSITY OF MILAN ↗
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div>
+            <h3>MA COM</h3>
+            <p>Public and Corporate Communication</p>
+            <p>Università degli Studi di Milano</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="https://www.unimi.it/" target="_blank">University</a>
+            <a href="https://com.cdl.unimi.it/en" target="_blank">Programme</a>
+            <a href="https://www.yesmilano.it/" target="_blank">Milan</a>
+        </div>
+
+        <p class="copyright">© 2026 MA COM — Student project</p>
+    </footer>
+
+</body>
 </html>
